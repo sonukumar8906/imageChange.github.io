@@ -1,0 +1,62 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: rgb(239, 234, 244);
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 44rem;
+  flex-direction: column;
+}
+.container img{
+width: 30rem;
+height: 20rem;
+border-radius: 10px;
+}
+
+#btn{
+margin-top: 2rem;
+padding: 5px 26px;
+  font-size: 19px;
+  font-weight: 600;
+  border: none;
+  background: #393961;
+  color: white;
+  border-radius: 9px;
+}
+</style>
+
+<body>
+    <div class="container">
+        <img src="image/img1.jpg" id="image" alt="here image">
+        <button id="btn">next &#8594</button>
+    </div>
+
+    <script>
+       const btn1 = document.querySelector('#btn');
+   btn1.addEventListener('click', () =>{
+    let image = document.querySelector('#image');
+    let images = ['image/img1.jpg', 'image/img2.png','image/img3.jpeg','image/img4.jpg','image/img5.jpg'];
+    let random  =Math.floor(Math.random()*5);
+    image.src = images[random]
+    console.log(random);
+  });
+    </script>
+</body>
+</html>
